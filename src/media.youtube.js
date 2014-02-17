@@ -110,7 +110,7 @@ videojs.Youtube = videojs.MediaTechController.extend({
 
     var params = {
       enablejsapi: 1,
-      iv_load_policy: 3,
+      iv_load_policy: (this.player_.options()['iv_load_policy'])?3:1,
       playerapiid: this.id(),
       disablekb: 1,
       wmode: 'transparent',
